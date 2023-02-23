@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  /*https://www.w3schools.com/whatis/tryit.asp?filename=trywhatis_jquery_slide */
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script> 
+$(document).ready(function(){
+  $("#flip").click(function(){
+    $("#panel").slideDown("slow");
+  });
+});
+</script>
+<style> 
+#panel, #flip {
+  padding: 16px;
+  background-color: #e5eecc;
+  border: solid 1px #c3c3c3;
+}
+#panel {
+  display: none;
+}
+</style>
+<body>
+
+<h2>jQuery Slide</h2> 
+<div id="flip">Click to slide down panel</div>
+<div id="panel">
+  <p>London is the most populous city in the United Kingdom,
+  with a metropolitan area of over 9 million inhabitants.</p>
+</div>
+
+</body>
+</html>
