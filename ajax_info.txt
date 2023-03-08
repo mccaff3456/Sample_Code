@@ -1,0 +1,2 @@
+This is the text to replace when AJAX is called.
+This is a text file.
