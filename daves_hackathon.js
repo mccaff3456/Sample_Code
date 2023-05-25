@@ -1,7 +1,5 @@
 function subarr_equalto_sum(arr, sum) {
-    let start = 0;
-    let end = 0;
-    let total = 0;
+    let [start, end, total] = [0, 0, 0];
 
     while (end < arr.length)
     {
