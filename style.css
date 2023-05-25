@@ -16,14 +16,14 @@ to this section's matching END comment to see page-specific styles.
 
 /* Our default values set as CSS variables */
 :root {
-  --color-bg: #69F7BE;
-  --color-text-main: #000000;
-  --color-primary: #FFFF00;
+  --color-bg: #214939;
+  --color-text-main: rgb(224, 217, 217);
+   --color-primary: #FFFF00;
   --wrapper-height: 87vh;
   --image-max-width: 300px;
   --image-margin: 3rem;
-  --font-family: "HK Grotesk";
-  --font-family-header: "HK Grotesk";
+  --font-family: "Arial";
+  --font-family-header:"Arial" ;
 }
 
 /* Basic page style resets */
