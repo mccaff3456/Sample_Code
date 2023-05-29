@@ -7,23 +7,24 @@ class Solution {
     //Function to find the sum of contiguous subarray with maximum sum.
     maxSubarraySum(arr, N){
         let max = arr[0];
+        let num_ifs = 0;
 
         function get_max_from_inner(inner) {
             let temp_sum = 0;
             inner.forEach((val) => {
                 temp_sum += val;
-                console.log("max: " + max + ", val: " + val + ", sum: " + temp_sum);
+                num_ifs++;
                 max = temp_sum > max ? temp_sum : max;
             })
         }
 
         for (let start=0; start < N; start++) {
+            num_ifs++;
             if (arr[start] > 0) {
                 let temp_max = get_max_from_inner(arr.slice(start));
-            } else {
-                console.log("start: " + arr[start]);
             }
         }
+        console.log(num_ifs + " comparisons");
         return max;
     } 
 }
