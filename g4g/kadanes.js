@@ -13,11 +13,13 @@ class Solution {
         arr.forEach((val) => {
             sum += val;
             num_ifs++;
-            if (sum <= 0) {
-                sum = 0;
+            if (sum > max) {
+                max = sum;
             } else {
                 num_ifs++;
-                max = sum > max ? sum : max;
+                if (sum <= 0) {
+                    sum = 0;
+                }
             }
         });
         console.log(num_ifs + " comparisons");
@@ -30,11 +32,12 @@ let tests = [
     { "array": [-1, -2, -3, -4], "N": 4},
     { "array": [-3, 1, 2, 10, -8, 4, -4], "N": 7},
     { "array": [-3, 1, 2, 10, -16, 4, 10, -4], "N": 8},
+    { "array": [-3, 1, 12, 1, -4, 1, -2, 10, -4], "N": 9},
 ];
 
 let solution = new Solution();
 
 tests.forEach ((test) => {
     console.log("N " + test["N"] + ", (" + test["array"]
-     + ") => [" + solution.maxSubarraySum(test["array"], test["N"]) + "]");
+     + ") => " + solution.maxSubarraySum(test["array"], test["N"]));
 });
