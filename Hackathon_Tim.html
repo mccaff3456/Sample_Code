@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Arrays</h1>
+<h2>The forEach() Method</h2>
+
+<p>Call a function once for each array element:</p>
+
+<p id="demo"></p>
+<p id="console"></p>
+
+
+<script>
+
+var S = 12;
+var N = 5;
+var id1 = 1;
+var id2 = 1;
+let sum = 0;
+const numbers = [22, 1, 9, 6,6];
+
+document.getElementById("demo").innerHTML = "-1";
+
+
+function myFunction(value,index) 
+  {
+      sum = value + sum; 
+    if (sum == S)
+    {id2=id1+index;
+     document.getElementById("demo").innerHTML = "ID1 = " + id1 										+ "   ID2= " + id2;
+     throw "found";
+     
+    }		
+  }
+while (id1-1 < N) 
+{   
+	sum = 0;
+	numbers.slice(id1-1).forEach(myFunction);
+    document.getElementById("console").innerHTML += numbers.slice(id1-1) + "<br>";
+   	id1 += 1;  
+}
+  
+</script>
+
+</body>
+</html>
