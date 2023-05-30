@@ -1,8 +1,4 @@
-/**
- * @param {number[]} arr
- * @param {number} N
- * @returns {number} 
-*/
+
 class Solution {
     //Function to find the sum of contiguous subarray with maximum sum.
     maxSubarraySum(arr, N){
